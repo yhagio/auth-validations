@@ -1,0 +1,23 @@
+{
+  "name": "auth-validations",
+  "version": "1.0.0",
+  "description": "Validates common inputs for user registration process",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhagio/auth-validations.git"
+  },
+  "keywords": [
+    "authentication",
+    "validations"
+  ],
+  "author": "Yuichi Hagio <yhagio87@gmail.com> (http://github.com/yhagio)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yhagio/auth-validations/issues"
+  },
+  "homepage": "https://github.com/yhagio/auth-validations#readme"
+}
