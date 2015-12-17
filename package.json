@@ -1,14 +1,16 @@
 {
   "name": "auth-validations",
-  "version": "2.0.0",
   "description": "Validates common inputs for user registration process",
+  "version": "0.0.0-semantically-released",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz",
+    "test": "mocha src/index.test.js -w",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yhagio/auth-validations.git"
+    "url": "https://github.com/yhagio/auth-validations.git"
   },
   "keywords": [
     "authentication",
@@ -19,5 +21,15 @@
   "bugs": {
     "url": "https://github.com/yhagio/auth-validations/issues"
   },
-  "homepage": "https://github.com/yhagio/auth-validations#readme"
+  "homepage": "https://github.com/yhagio/auth-validations#readme",
+  "devDependencies": {
+    "chai": "3.4.1",
+    "commitizen": "^2.4.6",
+    "cz-conventional-changelog": "^1.1.5",
+    "mocha": "2.3.4",
+    "semantic-release": "4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  }
 }

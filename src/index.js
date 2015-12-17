@@ -6,14 +6,15 @@ module.exports = {
   validateEmail: function(email){
     var errorMessage = '';
     var regex = /\S+@\S+\.\S+/;
-    var eamil = email.trim();
+    var email = email.trim();
+
+    if (email.length > 150) {
+      errorMessage = '* Email is too long, please use shorter email address';
+    }
+
     if (!regex.test(email) || email.length === 0) {
       errorMessage = '* Email must be in valid format';
     } 
-
-    if (email.length > 150) {
-      errorMessages = '* Email is too long, please use shorter email address';
-    }
 
     return errorMessage;
   },
