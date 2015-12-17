@@ -25,3 +25,20 @@ describe('Email', function() {
     expect(av.validateEmail(email)).to.equal('* Email is too long, please use shorter email address');
   });
 });
+
+describe('Validate String Length 0 to 50', function() {
+  it('should not be empty', function() {
+    var text = '';
+    expect(av.validateStringLength0to50(text)).to.equal('* Cannot be empty');
+  });
+
+  it('should not be longer than 50 characters', function() {
+    var text = 'sedutperspiciatisundeomnisistenatuserrorsitvoluptatemaccusan';
+    expect(av.validateStringLength0to50(text)).to.equal('* Cannot be more than 50 characters');
+  });
+
+  it('should be no message if text is between 0 to 50 characters', function() {
+    var text = 'seoluptatemaccusan';
+    expect(av.validateStringLength0to50(text)).to.equal('');
+  });
+});

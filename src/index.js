@@ -60,9 +60,9 @@ module.exports = {
   validateStringLength0to50: function(text){
     var errorMessage = '';
     if (text.trim().length > 50) {
-      errorMessage = 'Cannot be more than 50 characters';
+      errorMessage = '* Cannot be more than 50 characters';
     } else if (text.trim().length <= 0) {
-      errorMessage = 'Cannot be empty';
+      errorMessage = '* Cannot be empty';
     } else {
       errorMessage = '';
     }
