@@ -1,17 +1,18 @@
 {
   "name": "auth-validations",
   "description": "Validates common inputs for user registration process",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "main": "dist/index.js",
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist",
-    "build": "cp test/index.js dist/index.js",
+    "build": "cp src/index.output.js dist/index.js",
     "commit": "git-cz",
     "check-coverage": "istanbul check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "pretest:single": "rm -rf test && mkdir test && babel src -d test",
-    "test": "mocha test/index.test.js -w",
-    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec test/index.test.js",
+    "pretest": "babel src/index.js -o src/index.output.js && babel src/index.test.js -o src/index.output.test.js",
+    "pretest:single": "rm -rf test && mkdir test && babel src/index.js -o src/index.output.js && babel src/index.test.js -o src/index.output.test.js",
+    "test": "mocha src/index.output.test.js -w",
+    "test:single": "istanbul cover -x *.test.js _mocha -- -R spec src/index.output.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -29,7 +30,8 @@
   },
   "homepage": "https://github.com/yhagio/auth-validations#readme",
   "devDependencies": {
-    "babel-cli": "6.3.17",
+    "babel-core": "6.3.21",
+    "babel-preset-es2015": "^6.3.13",
     "chai": "3.4.1",
     "codecov.io": "0.1.6",
     "commitizen": "2.4.6",

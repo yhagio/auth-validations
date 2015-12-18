@@ -1,4 +1,4 @@
-var expect = require('chai').expect;
+import {expect} from 'chai';
 var av = require('./index');
 
 describe('Email', function() {

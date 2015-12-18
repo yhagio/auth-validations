@@ -1,9 +1,11 @@
+'use strict';
+
 module.exports = {
   /**
    * Validate user's email format
    *
    **/
-  validateEmail: function (email) {
+  validateEmail: function validateEmail(email) {
     var errorMessage = '';
     var regex = /\S+@\S+\.\S+/;
     var trimmedEmail = email.trim();
@@ -23,7 +25,7 @@ module.exports = {
    * Validate user's password format
    *
    **/
-  validatePassword: function (password) {
+  validatePassword: function validatePassword(password) {
     var errorMessages = [];
 
     if (password.length > 50) {
@@ -57,7 +59,7 @@ module.exports = {
    * Validate user's text input length
    * Must be 1 - 50 characters
    **/
-  validateStringLength0to50: function (text) {
+  validateStringLength0to50: function validateStringLength0to50(text) {
     var errorMessage = '';
     if (text.trim().length > 50) {
       errorMessage = '* Cannot be more than 50 characters';

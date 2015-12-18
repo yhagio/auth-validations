@@ -57,7 +57,7 @@ module.exports = {
    * Validate user's text input length
    * Must be 1 - 50 characters
    **/
-  validateStringLength0to50: function(text) {
+  validateStringLength0to50: (text)=> {
     var errorMessage = '';
     if (text.trim().length > 50) {
       errorMessage = '* Cannot be more than 50 characters';
