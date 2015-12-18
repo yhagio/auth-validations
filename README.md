@@ -8,7 +8,7 @@ npm install auth-validations
 ```
 In your javascript file,
 ```
-var av = require('av');
+var av = require('auth-validations');
 ```
 ---
 
