@@ -67,9 +67,5 @@ module.exports = {
       errorMessage = '';
     }
     return errorMessage;
-  },
-
-  sdfsdfd: function () {
-    console.log('sdfsdf');
   }
 };
