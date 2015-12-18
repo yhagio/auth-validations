@@ -3,10 +3,10 @@ module.exports = {
    * Validate user's email format
    *
    **/
-  validateEmail: (email)=> {
-    let errorMessage = '';
-    let regex = /\S+@\S+\.\S+/;
-    let trimmedEmail = email.trim();
+  validateEmail: function(email) {
+    var errorMessage = '';
+    var regex = /\S+@\S+\.\S+/;
+    var trimmedEmail = email.trim();
 
     if (trimmedEmail.length > 150) {
       errorMessage = '* Email is too long, please use shorter email address';
@@ -23,8 +23,8 @@ module.exports = {
    * Validate user's password format
    *
    **/
-  validatePassword: (password)=> {
-    let errorMessages = [];
+  validatePassword: function(password) {
+    var errorMessages = [];
 
     if (password.length > 50) {
       errorMessages.push('* Must be fewer than 50 chars');
@@ -57,8 +57,8 @@ module.exports = {
    * Validate user's text input length
    * Must be 1 - 50 characters
    **/
-  validateStringLength0to50: (text)=> {
-    let errorMessage = '';
+  validateStringLength0to50: function(text) {
+    var errorMessage = '';
     if (text.trim().length > 50) {
       errorMessage = '* Cannot be more than 50 characters';
     } else if (text.trim().length <= 0) {
