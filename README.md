@@ -33,6 +33,3 @@ If the array is empty, the validation passed successfully.
 ### validateStringLength0to50(text)
 Return error message (String).
 If the error message length is 0, the validation passed successfully.
-
-#### Notes:
-In babel v6, The CLI has been moved into the package 'babel-cli'. So, use `babel-cli` instead of `babel`
